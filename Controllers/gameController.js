@@ -7,7 +7,6 @@ async function game(data){
     const villainZarate = await getVillain(data);
 
     const superHero = getHero(data);
-    // console.log(superHero)
 
     const order = decideOrder(villainZarate, superHero);
 // console.log(order)
