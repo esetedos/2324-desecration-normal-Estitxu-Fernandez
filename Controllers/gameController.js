@@ -17,6 +17,9 @@ async function game(data){
 function getVillain(data){
     const character = data.find(character => character.name === "Junkpile");
     character.hp = character["powerstats"].strength*10;
+    if(character.hp > 666){
+        character.hp = 666;
+    }
     return character;
 }
 
@@ -26,7 +29,9 @@ function getHero(data){
         randomNum = Math.round(Math.random() * ((data.length) - 0) + 0);
     }
     data[randomNum].hp = data[randomNum]["powerstats"].strength*10;
-
+    if(data[randomNum].hp > 666){
+        data[randomNum].hp = 666;
+    }
 
     return data[randomNum];
 }
