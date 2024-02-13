@@ -131,7 +131,13 @@ async function game(data){
     console.log("------------------------------")
     console.log("------------------------------")
 
-    
+    if(order[0].hp <= 0){
+        console.log(order[0].name + " ha sido derrotado.")
+    }
+    else{
+        console.log(order[1].name + " ha sido derrotado.")
+
+    }
 
 
 }
